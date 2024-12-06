@@ -8,6 +8,9 @@ const compScr = document.querySelector("#computer-score");
 const choices = document.querySelectorAll(".choice");
 let msg = document.querySelector("#msg");
 
+const reset = document.querySelector("#reset");
+
+
 const genCompChoice = () =>{
     const options = ["rock","paper","scissors"];
     let randomIdx = Math.floor(Math.random() * 3);
@@ -57,3 +60,10 @@ choices.forEach((choice) =>{
         playGame(userChoice);
     })
 });
+
+reset.addEventListener("click", () =>{
+    userScore = 0;
+    compScore = 0;
+    userScr.innerText = userScore;
+    compScr.innerText = compScore;
+})
