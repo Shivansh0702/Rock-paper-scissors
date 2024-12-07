@@ -66,4 +66,6 @@ reset.addEventListener("click", () =>{
     compScore = 0;
     userScr.innerText = userScore;
     compScr.innerText = compScore;
-})
+    msg.innerText = "Play your move!";
+    msg.style.backgroundColor = "#081b31";
+});
